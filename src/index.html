@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>Hola mundo, que tal!</h1>
+      <div id="first-screen">
+        <!--Primera pantalla-->
+        <div>
+          <h1>Personaliza tu mensaje!</h1>
+          <p>
+            Crea un mensaje secreto y personalizado para tu persona favorita
+          </p>
+        </div>
+        <div>
+          <button id="friend">Amigo</button>
+          <button id="family">Familia</button> 
+          <button id="cople">Pareja</button>
+          <button id="partner">Colega</button>
+        </div>
+      </div>
+
+      <br />
+
+      <!--Segunda pantalla-->
+      <div id="second-screen" hidden>
+
+        <button id="cople">Crear mensaje</button>
+        <button id="partner">Descubrir Mensaje</button>
+
+      </div>
+       <!--Tercera pantalla-->
+      <div id="third-PartA" hidden>
+        
+        <input id="text" />
+        <input type="number" id="key" min="1" max="33" value="1" />
+        <button id="btn-encriptar">cifrar</button>
+        <button id="btn-desencriptar">descifrar</button>
+        <input id="output" disabled />
+      </div>
+
+      <div id="third-PartB" hidden>
+        
+        <input id="text" />
+        <input type="number" id="key" min="1" max="33" value="1" />
+        <button id="btn-encriptar">cifrar</button>
+        <button id="btn-desencriptar">descifrar</button>
+        <input id="output" disabled />
+      </div>
+
     </div>
- <input id="text"/>
-<input type="number" id="key" min="1" max="33" value="1"/>
-<button  id="btn-encriptar">cifrar</button>
-<button id="btn-desencriptar">descifrar</button>
-<input id="output" disabled/>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
