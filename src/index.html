@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <div id="root">
@@ -16,10 +17,10 @@
           </p>
         </div>
         <div>
-          <button id="friend">Amigo</button>
-          <button id="family">Familia</button> 
-          <button id="cople">Pareja</button>
-          <button id="partner">Colega</button>
+          <button id="friend" value="5">Amigo</button>
+          <button id="family" value="6">Familia</button> 
+          <button id="couple" value="7">Pareja</button>
+          <button id="partner"value="8">Colega</button>
         </div>
       </div>
 
@@ -28,27 +29,62 @@
       <!--Segunda pantalla-->
       <div id="second-screen" hidden>
 
-        <button id="cople">Crear mensaje</button>
-        <button id="partner">Descubrir Mensaje</button>
+        <button id="crear">Crear mensaje</button>
+        <button id="descubrir">Descubrir Mensaje</button>
 
       </div>
+      <br>
        <!--Tercera pantalla-->
       <div id="third-PartA" hidden>
+        <div>
+         <p>Ingresa el nombre de la persona para quien creas este mensaje</p>  
+        <input type="text" id="text-name" placeholder="Ingresa nombre">
+        </div>
+        <div>
+        <p>Ingresa tu mensaje para que sea cifrado</p>
+        <input id="text" placeholder="Ingresa tu mensaje"/>
+        </div>
+        <div>
+          <p>ingresa </p>
+            <input type="number" id="output-key" disabled />
+            <button id="btn-encriptar">cifrar</button>
+
+        </div>
+        <div>
+          <p>Listo tu mensaje esta creado</p>
+
+            <input id="output" disabled />
+
+
+        </div>
         
-        <input id="text" />
-        <input type="number" id="key" min="1" max="33" value="1" />
-        <button id="btn-encriptar">cifrar</button>
-        <button id="btn-desencriptar">descifrar</button>
-        <input id="output" disabled />
+        
       </div>
+      
 
       <div id="third-PartB" hidden>
-        
-        <input id="text" />
-        <input type="number" id="key" min="1" max="33" value="1" />
-        <button id="btn-encriptar">cifrar</button>
-        <button id="btn-desencriptar">descifrar</button>
-        <input id="output" disabled />
+
+        <div>
+          <p>Ingresa tu nombre</p>
+          <input type="text" id="name-decode" >
+        </div>
+        <div>
+           <p>Ingresa el mensaje que quieres descifrar</p>
+          <input id="text2" />
+
+        </div>
+        <div>
+          <p>Presiona el boton Descifrar para descubrir tu mensaje</p>
+          
+          <button id="btn-desencriptar">descifrar</button>
+
+        </div>
+
+        <div>
+          <p>Listo! ahora puedes leer tu mensaje </p>
+            <input id="output-partB" disabled />
+
+        </div>
       </div>
 
     </div>
