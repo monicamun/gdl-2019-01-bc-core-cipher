@@ -4,10 +4,15 @@ window.cipher = {
     var result = "";
 
     for (let i = 0; i !== message.length; i++) {
-      var c = message.charCodeAt(i);
+ 
+      if (message.charAt(i) === " ") {
+        result += " ";
+      } else {
+        var c = message.charCodeAt(i);
 
-      let valor = (c - 65 + n) % 26 + 65;
-      result += String.fromCharCode(valor);
+        let valor = (c - 65 + n) % 26 + 65;
+        result += String.fromCharCode(valor);
+      }
     }
     return result;
   },

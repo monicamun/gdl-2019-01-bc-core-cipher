@@ -29,8 +29,7 @@ function encriptar() {
   var output = document.getElementById("output");
 
   var result = cipher.encode(codigoCompleto, message);
-  var outputKey =document.getElementById("output-key");
-  outputKey.value =codigoCompleto;
+    
 
   output.value = result;
 
@@ -88,6 +87,13 @@ function convertirNombreYObtenerCodigo(nombreParaElCodigo) {
     }
     
     var codigoCompleto = codigoDeNivelDeConocido + codigoDeNombre;
+
+    if(codigoCompleto % 26 == 0){
+        codigoCompleto = 1;
+    } else {
+        codigoCompleto = codigoCompleto % 26
+    }
+
     return codigoCompleto;
     
 }

@@ -17,6 +17,12 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
 
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -48,19 +54,158 @@
         <div class="row">
           <!--botones de la primera pantalla donde eliges a la persona que te envio o quieres enviar un mensaje-->
 
-            <div class="three columns"><button id="friend" value="5">Amigo</button></div>
-            <div class="three columns"><button id="family" value="6">Familia</button></div>
-            <div class="three columns"><button id="couple" value="7">Pareja</button></div>
-            <div class="three columns"> <button id="partner" value="8">Colega</button></div>
-
-
+          <div class="three columns">
+            <button id="friend" value="5">Amigo</button>
+          </div>
+          <div class="three columns">
+            <button id="family" value="6">Familia</button>
+          </div>
+          <div class="three columns">
+            <button id="couple" value="7">Pareja</button>
+          </div>
+          <div class="three columns">
+            <button id="partner" value="8">Colega</button>
+          </div>
         </div>
-        <div class="row">
+        <div class="row"></div>
 
-
-        </div>
+        &nbsp;
       </div>
       <!-- cierra first-screen -->
+      <!--abre second-scren-->
+      <div id="second-screen" class="container" hidden>
+        <div class="row">
+          <div class="six columns">
+            <button id="crear">Crear mensaje</button>
+          </div>
+          <div class="six columns">
+            <button id="descubrir">Descubrir Mensaje</button>
+          </div>
+        </div>
+        <!--cierra second-screen-->
+        <!--abre tercera pantalla parte A-->
+        <div id="third-PartA" class="container" hidden>
+          <div class="row">
+            <div class="ten columns">
+              <p>
+                Ingresa el nombre de la persona para quien creas este mensaje
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <input type="text" id="text-name" placeholder="Ingresa nombre" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="ten columns">
+              <p>Ingresa tu mensaje para que sea cifrado</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <input id="text" placeholder="Ingresa tu mensaje" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <button id="btn-encriptar">cifrar</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"></div>
+            <p>Listo! tu mensaje esta creado</p>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"><input id="output" disabled /></div>
+          </div>
+
+          &nbsp;
+        </div>
+        <!--cierra tercera pantalla parte A-->
+        <!--abre tercera pantalla parte B-->
+        <div id="third-PartB" class="container" hidden>
+          <div class="row">
+            <div class="ten columns"><p>Ingresa tu nombre</p></div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <input type="text" id="name-decode" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <p>Ingresa el mensaje que quieres descifrar</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"><input id="text2" /></div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <p>Presiona el boton Descifrar para descubrir tu mensaje</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <button id="btn-desencriptar">descifrar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="two columns">
+              <p>Listo! ahora puedes leer tu mensaje</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"><input id="output-partB" disabled /></div>
+          </div>
+        </div>
+        <!--termina tercera pantalla parteB-->
+      </div>
+
+      <footer class="container">
+        <div class="row">
+          <span>
+            <!--icono correo-->
+            <a href="http://www.gmail.com" target="_blank">
+              <i class="fas fa-envelope fa-4x"></i
+            ></a>
+          </span>
+
+          <span>
+            <!--icono faceboock-->
+
+            <a href="http://www.faceboock.com" target="_blank">
+              <i class="fab fa-facebook-square fa-4x"></i>
+            </a>
+          </span>
+
+          <span>
+            <!--icono twitter-->
+            <a href="http://www.twitter.com" target="_blank">
+              <i class="fab fa-twitter-square fa-4x"></i>
+            </a>
+          </span>
+
+          <span>
+            <!--icono whatsapp-->
+            <a href="https://web.whatsapp.com/">
+              <i class="fab fa-whatsapp-square fa-4x"></i>
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
 
     <script src="cipher.js"></script>
