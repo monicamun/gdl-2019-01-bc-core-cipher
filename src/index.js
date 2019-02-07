@@ -1,16 +1,16 @@
 document.getElementById("btn-encriptar").addEventListener("click", encriptar);
 document.getElementById("btn-desencriptar").addEventListener("click", desencriptar);
 document.getElementById("friend").addEventListener("click",() => {
-    mostrarSegundaPantalla(5) 
+    mostrarSegundaPantalla(5);
 });
 document.getElementById("family").addEventListener("click",() => {
-    mostrarSegundaPantalla(6) 
+    mostrarSegundaPantalla(6);
 });
 document.getElementById("couple").addEventListener("click",() => {
-    mostrarSegundaPantalla(7) 
+    mostrarSegundaPantalla(7); 
 } );
 document.getElementById("partner").addEventListener("click", () => {
-    mostrarSegundaPantalla(8) 
+    mostrarSegundaPantalla(8); 
 });
 document.getElementById("crear").addEventListener("click",mostarPantallaA );
 document.getElementById("descubrir").addEventListener("click", mostarPantallaB);
@@ -29,7 +29,7 @@ function encriptar() {
   var output = document.getElementById("output");
 
   var result = cipher.encode(codigoCompleto, message);
-  var outputKey =document.getElementById("output-key")
+  var outputKey =document.getElementById("output-key");
   outputKey.value =codigoCompleto;
 
   output.value = result;
@@ -56,25 +56,26 @@ function desencriptar() {
 //funcion para mostrar una segunda seccion
 function mostrarSegundaPantalla(codigoDeNivelDeConocidoPorBoton) {
     codigoDeNivelDeConocido = codigoDeNivelDeConocidoPorBoton;
-    var secondEscreen = document.getElementById("second-screen")
-    secondEscreen.hidden = false
+    var secondEscreen = document.getElementById("second-screen");
+    secondEscreen.hidden = false;
+    
 }
 //Mostrar parte A 
 function mostarPantallaA() {
-    var thirdEscreenA = document.getElementById("third-PartA")
-    thirdEscreenA.hidden = false
-    var thirdEscreenB = document.getElementById("third-PartB")
-    thirdEscreenB.hidden = true
+    var thirdEscreenA = document.getElementById("third-PartA");
+    thirdEscreenA.hidden = false;
+    var thirdEscreenB = document.getElementById("third-PartB");
+    thirdEscreenB.hidden = true;
     
 
 }
 
 //Mostrar parte B
 function mostarPantallaB() {
-    var thirdEscreenA = document.getElementById("third-PartA")
-    thirdEscreenA.hidden = true
-    var thirdEscreenB = document.getElementById("third-PartB")
-    thirdEscreenB.hidden = false
+    var thirdEscreenA = document.getElementById("third-PartA");
+    thirdEscreenA.hidden = true;
+    var thirdEscreenB = document.getElementById("third-PartB");
+    thirdEscreenB.hidden = false;
     
 
 }

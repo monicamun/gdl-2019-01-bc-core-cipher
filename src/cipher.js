@@ -1,12 +1,12 @@
 window.cipher = {
   encode: function(key, message) {
-    var n = key + 26;
+    var n = key ;
     var result = "";
 
     for (let i = 0; i !== message.length; i++) {
       var c = message.charCodeAt(i);
 
-      let valor = ((c - 65 + n) % 26) + 65;
+      let valor = (c - 65 + n) % 26 + 65;
       result += String.fromCharCode(valor);
     }
     return result;
@@ -19,7 +19,10 @@ window.cipher = {
     for (let i = 0; i !== message.length; i++) {
       var c = message.charCodeAt(i);
 
-      valor = ((c - n + 65) % 26) + 65;
+     let  valor = c - n;
+     while(valor < 65) {
+         valor += 26;
+     }
       result += String.fromCharCode(valor);
     }
     return result;

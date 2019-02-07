@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Caesar Cipher</title>
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="skeleton/normalize.css" />
+    <link rel="stylesheet" href="skeleton/skeleton.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="root">
+      <!-- abre first-screen  -->
+      <div id="first-screen" class="container">
+        <div id="header" class="row">
+          <div class="two columns">
+            <img id="logo" src="/img/descarga.png" />
+          </div>
+          <div class="ten columns"><h1>Personaliza tu mensaje</h1></div>
+        </div>
+
+        <div class="row">
+          <div class="twelve columns">
+            <p>
+              Crea un mensaje secreto y personalizado para tu persona favorita
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <!--botones de la primera pantalla donde eliges a la persona que te envio o quieres enviar un mensaje-->
+
+            <div class="three columns"><button id="friend" value="5">Amigo</button></div>
+            <div class="three columns"><button id="family" value="6">Familia</button></div>
+            <div class="three columns"><button id="couple" value="7">Pareja</button></div>
+            <div class="three columns"> <button id="partner" value="8">Colega</button></div>
+
+
+        </div>
+        <div class="row">
+
+
+        </div>
+      </div>
+      <!-- cierra first-screen -->
+    </div>
+
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>

@@ -1,0 +1,52 @@
+/* body {
+background-image: url("/img/imagen_fondo/papel.jpg");
+
+}
+
+footer{
+
+    background: #20b2aa;
+}
+
+p {
+    color: #524c52;
+}
+
+i{
+    color: #524c52;
+    
+}
+button:hover{
+ color: #20b2aa;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+
+}
+ */
+
+ body {
+     margin: 40px;
+ }
+
+.columns {
+    text-align: center;
+}
+
+#logo {
+    height: 100px;
+}
+
+#header > .columns {
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#header > .columns > h1 {
+    line-height: 100px;
+}
