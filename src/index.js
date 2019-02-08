@@ -28,10 +28,16 @@ function encriptar() {
 
   var output = document.getElementById("output");
 
+
   var result = cipher.encode(codigoCompleto, message);
+
+  
     
 
   output.value = result;
+
+  
+
 
 
 }
@@ -65,6 +71,8 @@ function mostarPantallaA() {
     thirdEscreenA.hidden = false;
     var thirdEscreenB = document.getElementById("third-PartB");
     thirdEscreenB.hidden = true;
+    document.getElementById("third-PartB").reset();
+
     
 
 }
@@ -75,6 +83,7 @@ function mostarPantallaB() {
     thirdEscreenA.hidden = true;
     var thirdEscreenB = document.getElementById("third-PartB");
     thirdEscreenB.hidden = false;
+    document.getElementById("third-PartA").reset();
     
 
 }
@@ -91,7 +100,7 @@ function convertirNombreYObtenerCodigo(nombreParaElCodigo) {
     if(codigoCompleto % 26 == 0){
         codigoCompleto = 1;
     } else {
-        codigoCompleto = codigoCompleto % 26
+        codigoCompleto = codigoCompleto % 26;
     }
 
     return codigoCompleto;

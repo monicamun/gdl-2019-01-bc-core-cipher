@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous" />
+
+    <div></div>
+  </head>
+  <body>L
+    <div id="root">
+      <div class="header">
+        <header>
+          <div>
+            <p></p>
+          </div>
+          <div id="logo"><img src="/img/descarga.png" /></div>
+        </header>
+      </div>
+
+      <div id="first-screen">
+        <!--Primera pantalla-->
+        <div>
+          <h1>Personaliza tu mensaje!</h1>
+          <p>
+            Crea un mensaje secreto y personalizado para tu persona favorita
+          </p>
+        </div>
+        <div>
+          <!--botones de la primera pantalla donde eliges a la persona que te envio o quieres enviar un mensaje-->
+          <button id="friend" value="5">Amigo</button>
+          <button id="family" value="6">Familia</button>
+          <button id="couple" value="7">Pareja</button>
+          <button id="partner" value="8">Colega</button>
+        </div>
+      </div>
+
+      <br />
+
+      <!--Segunda pantalla-->
+      <div id="second-screen" hidden>
+        <!--botones donde se elige entre la opcion de cifrar y descifrar-->
+        <button id="crear">Crear mensaje</button>
+        <button id="descubrir">Descubrir Mensaje</button>
+      </div>
+      <br />
+      <!--Tercera pantalla que se muestra si eliges la opcion de cifrar o creao mensaje-->
+      <div id="third-PartA" hidden>
+        <div>
+          <p>Ingresa el nombre de la persona para quien creas este mensaje</p>
+          <input type="text" id="text-name" placeholder="Ingresa nombre" />
+        </div>
+        <div>
+          <p>Ingresa tu mensaje para que sea cifrado</p>
+          <input id="text" placeholder="Ingresa tu mensaje" />
+        </div>
+        <div>
+          <p>ingresa</p>
+          <input type="number" id="output-key" disabled />
+          <button id="btn-encriptar">cifrar</button>
+        </div>
+        <div>
+          <p>Listo tu mensaje esta creado</p>
+
+          <input id="output" disabled />
+        </div>
+      </div>
+
+      <div id="third-PartB" hidden>
+        <div>
+          <p>Ingresa tu nombre</p>
+          <input type="text" id="name-decode" />
+        </div>
+        <div>
+          <p>Ingresa el mensaje que quieres descifrar</p>
+          <input id="text2" />
+        </div>
+        <div>
+          <p>Presiona el boton Descifrar para descubrir tu mensaje</p>
+
+          <button id="btn-desencriptar">descifrar</button>
+        </div>
+
+        <div>
+          <p>Listo! ahora puedes leer tu mensaje</p>
+          <input id="output-partB" disabled />
+        </div>
+      </div>
+
+      <div>
+        <footer>
+          <div class="icons">
+
+            <div>
+              <p>Comparte y envia tu mensaje por la red social de tu preferencia</p>
+            </div>
+            <span>
+              <!--icono correo-->
+              <a href="http://www.gmail.com" target="_blank">
+                <i class="fas fa-envelope fa-4x"></i></a>
+            </span>
+            <span>
+              <!--icono faceboock-->
+
+              <a href="http://www.faceboock.com" target="_blank">
+                  <i class="fab fa-facebook-square fa-4x"></i>
+              </a>
+            </span>
+            <span>
+              <!--icono twitter-->
+              <a href="http://www.twitter.com" target="_blank">
+                  <i class="fab fa-twitter-square fa-4x"></i>
+              </a>
+
+              <span>
+                <!--icono whatsapp-->
+                <a href="https://web.whatsapp.com/">
+                  <i class="fab fa-whatsapp-square fa-4x"></i>
+                </a>
+
+              </span>
+            </span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

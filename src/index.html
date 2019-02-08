@@ -1,135 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8" />
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet"
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
 
-    <div></div>
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div id="root">
-      <div class="header">
-        <header>
-          <div>
-            <p>Nombre de la pagina</p>
+      <!-- abre first-screen  -->
+      <div id="first-screen" class="container">
+        <div id="header" class="row">
+          <div class="two columns">
+            <img id="logo" src="/img/descarga.png" />
           </div>
-          <div id="logo"><img src="/img/descarga.png" /></div>
-        </header>
-      </div>
-
-      <div id="first-screen">
-        <!--Primera pantalla-->
-        <div>
-          <h1>Personaliza tu mensaje!</h1>
-          <p>
-            Crea un mensaje secreto y personalizado para tu persona favorita
-          </p>
+          <div class="ten columns"><h1>Personaliza tu mensaje</h1></div>
         </div>
-        <div>
+
+        <div class="row">
+          <div class="twelve columns">
+            <p>
+              Crea un mensaje secreto y personalizado para tu persona favorita
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
           <!--botones de la primera pantalla donde eliges a la persona que te envio o quieres enviar un mensaje-->
-          <button id="friend" value="5">Amigo</button>
-          <button id="family" value="6">Familia</button>
-          <button id="couple" value="7">Pareja</button>
-          <button id="partner" value="8">Colega</button>
+
+         
+            <button id="friend" value="5">Amigo</button>
+          
+            <button id="family" value="6">Familia</button>
+          
+            <button id="couple" value="7">Pareja</button>
+          
+            <button id="partner" value="8">Colega</button>
+         
         </div>
+        <div class="row"></div>
+
+        &nbsp;
       </div>
-
-      <br />
-
-      <!--Segunda pantalla-->
-      <div id="second-screen" hidden>
-        <!--botones donde se elige entre la opcion de cifrar y descifrar-->
-        <button id="crear">Crear mensaje</button>
-        <button id="descubrir">Descubrir Mensaje</button>
-      </div>
-      <br />
-      <!--Tercera pantalla que se muestra si eliges la opcion de cifrar o creao mensaje-->
-      <div id="third-PartA" hidden>
-        <div>
-          <p>Ingresa el nombre de la persona para quien creas este mensaje</p>
-          <input type="text" id="text-name" placeholder="Ingresa nombre" />
+      <!-- cierra first-screen -->
+      <!--abre second-scren-->
+      <div id="second-screen" class="container" hidden>
+        <div class="row">
+          
+            <button id="crear">Crear mensaje</button>
+          
+          
+            <button id="descubrir">Descubrir Mensaje</button>
+          
         </div>
-        <div>
-          <p>Ingresa tu mensaje para que sea cifrado</p>
-          <input id="text" placeholder="Ingresa tu mensaje" />
-        </div>
-        <div>
-          <p>ingresa</p>
-          <input type="number" id="output-key" disabled />
-          <button id="btn-encriptar">cifrar</button>
-        </div>
-        <div>
-          <p>Listo tu mensaje esta creado</p>
-
-          <input id="output" disabled />
-        </div>
-      </div>
-
-      <div id="third-PartB" hidden>
-        <div>
-          <p>Ingresa tu nombre</p>
-          <input type="text" id="name-decode" />
-        </div>
-        <div>
-          <p>Ingresa el mensaje que quieres descifrar</p>
-          <input id="text2" />
-        </div>
-        <div>
-          <p>Presiona el boton Descifrar para descubrir tu mensaje</p>
-
-          <button id="btn-desencriptar">descifrar</button>
-        </div>
-
-        <div>
-          <p>Listo! ahora puedes leer tu mensaje</p>
-          <input id="output-partB" disabled />
-        </div>
-      </div>
-
-      <div>
-        <footer>
-          <div class="icons">
-
-            <div>
-              <p>Comparte y envia tu mensaje por la red social de tu preferencia</p>
+        <!--cierra second-screen-->
+        <!--abre tercera pantalla parte A-->
+        <form id="third-PartA" class="container" hidden>
+          <div class="row">
+              
+            <div class="ten columns">
+              <p>
+                Ingresa el nombre de la persona para quien creas este mensaje
+              </p>
             </div>
-            <span>
-              <!--icono correo-->
-              <a href="http://www.gmail.com" target="_blank">
-                <i class="fas fa-envelope fa-4x"></i></a>
-            </span>
-            <span>
-              <!--icono faceboock-->
-
-              <a href="http://www.faceboock.com" target="_blank">
-                  <i class="fab fa-facebook-square fa-4x"></i>
-              </a>
-            </span>
-            <span>
-              <!--icono twitter-->
-              <a href="http://www.twitter.com" target="_blank">
-                  <i class="fab fa-twitter-square fa-4x"></i>
-              </a>
-
-              <span>
-                <!--icono whatsapp-->
-                <a href="https://web.whatsapp.com/">
-                  <i class="fab fa-whatsapp-square fa-4x"></i>
-                </a>
-
-              </span>
-            </span>
           </div>
-        </footer>
+
+          <div class="row">
+            <div class="ten columns">
+              <input type="text" id="text-name" placeholder="Ingresa nombre" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="ten columns">
+              <p>Ingresa tu mensaje para que sea cifrado</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <input id="text" placeholder="Ingresa tu mensaje" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <button id="btn-encriptar">cifrar</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"></div>
+            <p>Listo! tu mensaje esta creado</p>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"><input id="output" disabled /></div>
+          </div>
+
+          &nbsp;
+        </form>
+        <!--cierra tercera pantalla parte A-->
+        <!--abre tercera pantalla parte B-->
+        <form id="third-PartB" class="container" hidden>
+          <div class="row">
+            <div class="ten columns"><p>Ingresa tu nombre</p></div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <input type="text" id="name-decode" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <p>Ingresa el mensaje que quieres descifrar</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"><input id="text2" /></div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <p>Presiona el boton Descifrar para descubrir tu mensaje</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns">
+              <button id="btn-desencriptar">descifrar</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="two columns">
+              <p>Listo! ahora puedes leer tu mensaje</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="ten columns"><input id="output-partB" disabled /></div>
+          </div>
+        </form>
+        <!--termina tercera pantalla parteB-->
       </div>
+
+      <footer class="container">
+        <div class="row">
+          <span>
+            <!--icono correo-->
+            <a href="http://www.gmail.com" target="_blank">
+              <i class="fas fa-envelope fa-4x"></i
+            ></a>
+          </span>
+
+          <span>
+            <!--icono faceboock-->
+
+            <a href="http://www.faceboock.com" target="_blank">
+              <i class="fab fa-facebook-square fa-4x"></i>
+            </a>
+          </span>
+
+          <span>
+            <!--icono twitter-->
+            <a href="http://www.twitter.com" target="_blank">
+              <i class="fab fa-twitter-square fa-4x"></i>
+            </a>
+          </span>
+
+          <span>
+            <!--icono whatsapp-->
+            <a href="https://web.whatsapp.com/">
+              <i class="fab fa-whatsapp-square fa-4x"></i>
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   </body>
 </html>
