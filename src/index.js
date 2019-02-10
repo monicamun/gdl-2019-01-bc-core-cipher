@@ -1,15 +1,27 @@
+var buttons = {
+ friend: document.getElementById("friend"),
+ family: document.getElementById("family"),
+ couple: document.getElementById("couple"),
+ partner:document.getElementById("partner")
+
+};
+
 document.getElementById("btn-encriptar").addEventListener("click", encriptar);
 document.getElementById("btn-desencriptar").addEventListener("click", desencriptar);
-document.getElementById("friend").addEventListener("click",() => {
+buttons.friend.addEventListener("click",() => {
+    changeButtonClass(buttons.friend);
     mostrarSegundaPantalla(5);
 });
-document.getElementById("family").addEventListener("click",() => {
+buttons.family.addEventListener("click",() => {
+    changeButtonClass(buttons.family);
     mostrarSegundaPantalla(6);
 });
-document.getElementById("couple").addEventListener("click",() => {
+buttons.couple.addEventListener("click",() => {
+    changeButtonClass(buttons.couple);
     mostrarSegundaPantalla(7); 
 } );
-document.getElementById("partner").addEventListener("click", () => {
+buttons.partner.addEventListener("click", () => {
+    changeButtonClass(buttons.partner);
     mostrarSegundaPantalla(8); 
 });
 document.getElementById("crear").addEventListener("click",mostarPantallaA );
@@ -105,4 +117,17 @@ function convertirNombreYObtenerCodigo(nombreParaElCodigo) {
 
     return codigoCompleto;
     
+}
+function changeButtonClass(currentButton){
+    buttons.friend.classList.remove("active");
+    buttons.family.classList.remove("active");
+    buttons.couple.classList.remove("active");
+    buttons.partner.classList.remove("active");
+
+    currentButton.classList.add("active");
+
+   
+
+
+
 }

@@ -32,7 +32,7 @@
   <body>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="root">
+    <div class="content-container">
       <!-- abre first-screen  -->
       <div id="first-screen" class="container">
         <div id="header" class="row">
@@ -44,9 +44,9 @@
 
         <div class="row">
           <div class="twelve columns">
-            <p>
-              Crea un mensaje secreto y personalizado para tu persona favorita
-            </p>
+            <h3>
+              Crea un mensaje secreto y personalizado para tu persona favorita, o descubre ese mensaje secreto que te han enviado
+            </h3>
           </div>
         </div>
 
@@ -54,13 +54,13 @@
           <!--botones de la primera pantalla donde eliges a la persona que te envio o quieres enviar un mensaje-->
 
          
-            <button id="friend" value="5">Amigo</button>
+            <button  id="friend" value="5">Amigo</button>
           
-            <button id="family" value="6">Familia</button>
+            <button  id="family" value="6">Familia</button>
           
-            <button id="couple" value="7">Pareja</button>
+            <button  id="couple" value="7">Pareja</button>
           
-            <button id="partner" value="8">Colega</button>
+            <button  id="partner" value="8">Colega</button>
          
         </div>
         <div class="row"></div>
@@ -103,7 +103,9 @@
 
           <div class="row">
             <div class="ten columns">
-              <input id="text" placeholder=" Mensaje" />
+
+              <textarea name="" id="text" cols="30" rows="10" placeholder="Mensaje"></textarea>
+              
             </div>
           </div>
 
@@ -125,7 +127,10 @@
           </div>
 
           <div class="row">
-            <div class="ten columns"><input id="output" disabled /></div>
+            <div class="ten columns">
+
+              <textarea name="" id="output" cols="30" rows="10" disabled></textarea>
+            </div>
           </div>
 
           &nbsp;
@@ -179,39 +184,42 @@
         <!--termina tercera pantalla parteB-->
       </div>
 
-      <footer class="container">
-        <div class="row">
-          <span>
-            <!--icono correo-->
-            <a href="http://www.gmail.com" target="_blank">
-              <i class="fas fa-envelope fa-4x"></i
-            ></a>
-          </span>
-
-          <span>
-            <!--icono faceboock-->
-
-            <a href="http://www.faceboock.com" target="_blank">
-              <i class="fab fa-facebook-square fa-4x"></i>
-            </a>
-          </span>
-
-          <span>
-            <!--icono twitter-->
-            <a href="http://www.twitter.com" target="_blank">
-              <i class="fab fa-twitter-square fa-4x"></i>
-            </a>
-          </span>
-
-          <span>
-            <!--icono whatsapp-->
-            <a href="https://web.whatsapp.com/">
-              <i class="fab fa-whatsapp-square fa-4x"></i>
-            </a>
-          </span>
-        </div>
-      </footer>
+     
     </div>
+    <footer class="container">
+      <div class="row">
+        <span>
+          <!--icono correo-->
+          <a href="http://www.gmail.com" target="_blank">
+            <i class="fas fa-envelope fa-4x"></i
+          ></a>
+        </span>
+
+        <span>
+          <!--icono faceboock-->
+
+          <a href="http://www.faceboock.com" target="_blank">
+            <i class="fab fa-facebook-square fa-4x"></i>
+          </a>
+        </span>
+
+        <span>
+          <!--icono twitter-->
+          <a href="http://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter-square fa-4x"></i>
+          </a>
+        </span>
+
+        <span>
+          <!--icono whatsapp-->
+          <a href="https://web.whatsapp.com/" target="_blank">
+            <i class="fab fa-whatsapp-square fa-4x"></i>
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
