@@ -98,7 +98,7 @@ input[type="button"]:focus {
 
 button.active{
 
-     color: #0fa0ce;
+     background: #0fa0ce;
 }
 img{
 

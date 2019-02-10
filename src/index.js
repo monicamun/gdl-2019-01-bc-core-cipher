@@ -1,3 +1,4 @@
+//creo un objeto para poder reutilizar los id de mis botones
 var buttons = {
  friend: document.getElementById("friend"),
  family: document.getElementById("family"),
@@ -5,9 +6,10 @@ var buttons = {
  partner:document.getElementById("partner")
 
 };
-
+// se escuchan todos los eventos del DOM
 document.getElementById("btn-encriptar").addEventListener("click", encriptar);
 document.getElementById("btn-desencriptar").addEventListener("click", desencriptar);
+
 buttons.friend.addEventListener("click",() => {
     changeButtonClass(buttons.friend);
     mostrarSegundaPantalla(5);
