@@ -7,43 +7,43 @@ var buttons = {
 
 };
 // se escuchan todos los eventos del DOM
-document.getElementById("btn-encriptar").addEventListener("click", encriptar);
-document.getElementById("btn-desencriptar").addEventListener("click", desencriptar);
+document.getElementById("btn-encriptar").addEventListener("click", code);
+document.getElementById("btn-desencriptar").addEventListener("click", decode);
 
 buttons.friend.addEventListener("click",() => {
     changeButtonClass(buttons.friend);
-    mostrarSegundaPantalla(5);
+    secondScreen(5);
 });
 buttons.family.addEventListener("click",() => {
     changeButtonClass(buttons.family);
-    mostrarSegundaPantalla(6);
+    secondScreen(6);
 });
 buttons.couple.addEventListener("click",() => {
     changeButtonClass(buttons.couple);
-    mostrarSegundaPantalla(7); 
+    secondScreen(7); 
 } );
 buttons.partner.addEventListener("click", () => {
     changeButtonClass(buttons.partner);
-    mostrarSegundaPantalla(8); 
+    secondScreen(8); 
 });
 document.getElementById("crear").addEventListener("click",mostarPantallaA );
-document.getElementById("descubrir").addEventListener("click", mostarPantallaB);
+document.getElementById("descubrir").addEventListener("click", screenB);
 
 
 var codigoDeNivelDeConocido;
 
 
 //valores y variables para encriptar mensaje
-function encriptar() {
+function code() {
   var message = document.getElementById("text").value.toUpperCase();
-  var nombreParaCodigo = document.getElementById("text-name").value.toUpperCase();
+  var nameCode = document.getElementById("text-name").value.toUpperCase();
   
-  var codigoCompleto = convertirNombreYObtenerCodigo(nombreParaCodigo);
+  var codeComplete = convertNameCode(nameCode);
 
   var output = document.getElementById("output");
 
 
-  var result = cipher.encode(codigoCompleto, message);
+  var result = cipher.encode(codeComplete, message);
 
   
     
@@ -58,22 +58,22 @@ function encriptar() {
 
 
 //valores y variables para desencriptar
-function desencriptar() {
+function decode() {
   var message = document.getElementById("text2").value.toUpperCase();
-  var nombreParaCodigo = document.getElementById("name-decode").value.toUpperCase();
+  var nameCode = document.getElementById("name-decode").value.toUpperCase();
   
-  var codigoCompleto = convertirNombreYObtenerCodigo(nombreParaCodigo);
-    console.log(codigoCompleto);
+  var codeComplete = convertNameCode(nameCode);
+    console.log(codeComplete);
  
   var output = document.getElementById("output-partB");
 
-  var result = cipher.decode(codigoCompleto, message);
+  var result = cipher.decode(codeComplete, message);
   output.value = result;
 }
 
 
 //funcion para mostrar una segunda seccion
-function mostrarSegundaPantalla(codigoDeNivelDeConocidoPorBoton) {
+function secondScreen(codigoDeNivelDeConocidoPorBoton) {
     codigoDeNivelDeConocido = codigoDeNivelDeConocidoPorBoton;
     var secondEscreen = document.getElementById("second-screen");
     secondEscreen.hidden = false;
@@ -92,7 +92,7 @@ function mostarPantallaA() {
 }
 
 //Mostrar parte B
-function mostarPantallaB() {
+function screenB() {
     var thirdEscreenA = document.getElementById("third-PartA");
     thirdEscreenA.hidden = true;
     var thirdEscreenB = document.getElementById("third-PartB");
@@ -102,23 +102,27 @@ function mostarPantallaB() {
 
 }
 
-function convertirNombreYObtenerCodigo(nombreParaElCodigo) {
 
-    var codigoDeNombre = 0;
-    for (let index = 0; index !== nombreParaElCodigo.length; index++) {
-        codigoDeNombre += nombreParaElCodigo.charCodeAt(index);
+//funcion que toma un string y un numero predeterminado en los botones para convertirlos en el offset
+function convertNameCode(nameForCode) {
+
+    var nameCode = 0;
+    for (let index = 0; index !== nameForCode.length; index++) {
+        nameCode += nameForCode.charCodeAt(index);
     }
     
-    var codigoCompleto = codigoDeNivelDeConocido + codigoDeNombre;
+    var completeCode = codigoDeNivelDeConocido + nameCode;
 
-    if(codigoCompleto % 26 == 0){
-        codigoCompleto = 1;
+    if(completeCode % 26 == 0){// en esta parte de la funcion corregimos el error que se peuda generar al seleccionar un numero que te lleve a posicionarte en el indice 0 o 65
+        completeCode = 1;
     } else {
-        codigoCompleto = codigoCompleto % 26;
+        completeCode = completeCode % 26;
     }
 
-    return codigoCompleto;
+    return completeCode;
     
+
+ //funcion para mantener seleccionado uno de los botones   
 }
 function changeButtonClass(currentButton){
     buttons.friend.classList.remove("active");
